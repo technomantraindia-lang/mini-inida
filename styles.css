@@ -333,7 +333,7 @@ img {
   width: 90%;
   max-width: 1550px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 60px; /* Safe gutters from left and right screen borders */
   box-sizing: border-box;
 }
 
@@ -1568,117 +1568,187 @@ img {
   background-attachment: fixed;
   border-top: 1px solid rgba(212, 175, 55, 0.25);
   border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-  padding: 80px 0;
+  padding: 90px 0;
 }
 
 .action-footer-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
   align-items: center;
-}
-
-.action-panel-heading h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-  line-height: 1.35;
-  color: var(--text-light);
-  letter-spacing: 1px;
-}
-
-.action-panel-heading h2 .highlight-gold {
-  color: var(--gold);
-  display: block;
-  margin-top: 5px;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.action-panel-heading p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  max-width: 90%;
-}
-
-.panel-btn-grid {
-  gap: 20px;
-}
-
-.panel-cta-card {
-  background: rgba(5, 8, 20, 0.75);
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 60px 60px 12px 12px; /* Arch niche shape */
-  padding: 35px 20px;
-  display: flex;
-  flex-direction: column; /* Stack vertically */
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 18px;
-  cursor: pointer;
-  transition: all var(--transition-medium);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
   width: 100%;
 }
 
-.panel-cta-card:hover {
-  background: var(--gold-gradient);
-  border-color: var(--gold);
-  transform: translateY(-8px); /* lift up arch card */
-  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.35), var(--gold-glow);
+.cta-left-banner {
+  text-align: left;
+  color: var(--text-light);
 }
 
-.panel-cta-card:hover .cta-icon {
-  background-color: var(--bg-dark);
+.cta-mini-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--gold);
-  border-color: var(--gold);
-  transform: scale(1.05);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-.panel-cta-card:hover .cta-info strong {
-  color: var(--bg-dark);
+.cta-left-banner h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  letter-spacing: 1px;
 }
 
-.panel-cta-card:hover .cta-info span {
-  color: rgba(5, 8, 20, 0.85);
+.cta-left-banner p {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 35px;
+  max-width: 90%;
 }
 
-.cta-icon {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  background-color: rgba(212, 175, 55, 0.08);
+.cta-direct-phone {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(212, 175, 55, 0.05);
   border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 15px 25px;
+  border-radius: 30px;
+  width: fit-content;
+}
+
+.phone-ring-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  color: var(--bg-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
-  color: var(--gold);
-  transition: all var(--transition-medium);
+  font-size: 1.1rem;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  animation: pulsePhone 1.5s infinite alternate ease-in-out;
 }
 
-.cta-info {
+.cta-direct-phone div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 5px;
 }
 
-.cta-info strong {
-  font-size: 0.98rem;
+.cta-direct-phone strong {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.cta-direct-phone a {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  font-weight: 700;
+  transition: color var(--transition-fast);
+}
+
+.cta-direct-phone a:hover {
+  color: var(--gold);
+}
+
+/* Right side form card */
+.cta-right-form-card {
+  background: rgba(5, 8, 20, 0.65);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+  text-align: left;
+}
+
+.cta-right-form-card .form-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: var(--text-light);
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.cta-right-form-card .form-subtitle {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.cta-quick-form .form-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.cta-quick-form .form-input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.cta-quick-form label {
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: var(--text-light);
-  transition: color var(--transition-fast);
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.cta-info span {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  transition: color var(--transition-fast);
+.cta-quick-form select,
+.cta-quick-form input {
+  background-color: rgba(5, 8, 20, 0.5) !important;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--text-light) !important;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.cta-quick-form select:focus,
+.cta-quick-form input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+}
+
+.cta-quick-form select option {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.btn-full {
+  width: 100%;
+  padding: 14px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+@keyframes pulsePhone {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
 }
 
 /* Footer Section */

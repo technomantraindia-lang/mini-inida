@@ -740,39 +740,50 @@
   <!-- Action Bar Above Footer -->
   <div class="action-footer-panel">
     <div class="container">
-      <div class="grid grid-3 align-center action-footer-grid">
+      <div class="action-footer-grid">
         
-        <div class="action-panel-heading">
+        <!-- Left Side Copy & Phone Medallion -->
+        <div class="cta-left-banner">
+          <span class="cta-mini-tag"><i class="fa-solid fa-crown"></i> PRIVATE EVENTS & BANQUETS</span>
           <h2>PLAN YOUR NEXT CELEBRATION <span class="highlight-gold">WITH MINI-INDIA</span></h2>
-          <p>From intimate family gatherings to grand destination weddings, we make every moment extraordinary.</p>
+          <p>From intimate family gatherings to grand destination weddings, we make every event and celebration extraordinary in Pattaya.</p>
+          <div class="cta-direct-phone">
+            <span class="phone-ring-icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <strong>DIRECT EVENT LINE</strong>
+              <a href="tel:+66981807111">+66 98 180 7111</a>
+            </div>
+          </div>
         </div>
         
-        <div class="action-panel-buttons col-span-2">
-          <div class="grid grid-3 panel-btn-grid">
-            <button class="panel-cta-card" onclick="openBookingModal('dining')">
-              <span class="cta-icon"><i class="fa-solid fa-utensils"></i></span>
-              <div class="cta-info">
-                <strong>BOOK A TABLE</strong>
-                <span>Reserve for Dining</span>
+        <!-- Right Side Frosted Glass Form Card -->
+        <div class="cta-right-form-card">
+          <h3 class="form-title">EVENT PLANNER</h3>
+          <span class="form-subtitle">Share event details for a custom proposal</span>
+          <form class="cta-quick-form" id="ctaQuickForm">
+            <div class="form-input-group">
+              <label for="ctaOccasion"><i class="fa-solid fa-gift"></i> OCCASION</label>
+              <select id="ctaOccasion" required>
+                <option value="" disabled selected>Select Occasion</option>
+                <option value="wedding">Royal Wedding</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="birthday">Birthday Party</option>
+                <option value="reception">Reception Gala</option>
+                <option value="private">Private Celebration</option>
+              </select>
+            </div>
+            <div class="form-input-row">
+              <div class="form-input-group">
+                <label for="ctaDate"><i class="fa-solid fa-calendar"></i> DATE</label>
+                <input type="date" id="ctaDate" required>
               </div>
-            </button>
-
-            <button class="panel-cta-card" onclick="openEnquiryModal('event')">
-              <span class="cta-icon"><i class="fa-solid fa-calendar-check"></i></span>
-              <div class="cta-info">
-                <strong>PLAN AN EVENT</strong>
-                <span>Celebrate with Us</span>
+              <div class="form-input-group">
+                <label for="ctaGuests"><i class="fa-solid fa-users"></i> GUESTS</label>
+                <input type="number" id="ctaGuests" placeholder="Est. Guests" min="10" required>
               </div>
-            </button>
-
-            <a href="tel:+66981807111" class="panel-cta-card">
-              <span class="cta-icon"><i class="fa-solid fa-phone"></i></span>
-              <div class="cta-info">
-                <strong>CALL NOW</strong>
-                <span>+66 98 180 7111</span>
-              </div>
-            </a>
-          </div>
+            </div>
+            <button type="submit" class="btn btn-gold btn-full">GET CUSTOM PROPOSAL</button>
+          </form>
         </div>
 
       </div>

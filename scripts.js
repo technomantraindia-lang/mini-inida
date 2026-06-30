@@ -422,6 +422,16 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', setupStackingDeck);
   window.addEventListener('load', setupStackingDeck);
 
+  // Event planner quick form submission
+  const ctaQuickForm = document.getElementById('ctaQuickForm');
+  if (ctaQuickForm) {
+    ctaQuickForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for planning with Mini-India! A royal event manager will call you within 24 hours with a custom proposal.');
+      ctaQuickForm.reset();
+    });
+  }
+
 });
 
 // ==========================================================================================
