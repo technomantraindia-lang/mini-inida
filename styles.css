@@ -329,6 +329,14 @@ img {
   padding: 10px 0;
 }
 
+.utility-container {
+  width: 90%;
+  max-width: 1550px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
 .utility-flex {
   display: flex;
   justify-content: space-between;
@@ -1594,36 +1602,40 @@ img {
 }
 
 .panel-btn-grid {
-  gap: 15px;
+  gap: 20px;
 }
 
 .panel-cta-card {
-  background: rgba(5, 8, 20, 0.7);
+  background: rgba(5, 8, 20, 0.75);
   border: 1px solid rgba(212, 175, 55, 0.35);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 8px;
-  padding: 22px 25px;
+  border-radius: 60px 60px 12px 12px; /* Arch niche shape */
+  padding: 35px 20px;
   display: flex;
+  flex-direction: column; /* Stack vertically */
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  gap: 18px;
   cursor: pointer;
   transition: all var(--transition-medium);
-  text-align: left;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
   width: 100%;
 }
 
 .panel-cta-card:hover {
   background: var(--gold-gradient);
   border-color: var(--gold);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3), var(--gold-glow);
+  transform: translateY(-8px); /* lift up arch card */
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.35), var(--gold-glow);
 }
 
 .panel-cta-card:hover .cta-icon {
-  color: var(--bg-dark);
-  transform: scale(1.15);
+  background-color: var(--bg-dark);
+  color: var(--gold);
+  border-color: var(--gold);
+  transform: scale(1.05);
 }
 
 .panel-cta-card:hover .cta-info strong {
@@ -1631,31 +1643,40 @@ img {
 }
 
 .panel-cta-card:hover .cta-info span {
-  color: rgba(5, 8, 20, 0.8);
+  color: rgba(5, 8, 20, 0.85);
 }
 
 .cta-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.8rem;
   color: var(--gold);
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  transition: all var(--transition-medium);
 }
 
 .cta-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 .cta-info strong {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   color: var(--text-light);
-  margin-bottom: 4px;
   transition: color var(--transition-fast);
 }
 
 .cta-info span {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   transition: color var(--transition-fast);
 }
