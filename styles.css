@@ -374,6 +374,13 @@ img {
   font-size: 0.75rem;
   color: var(--text-muted);
   transition: all var(--transition-fast);
+  line-height: 1;
+}
+
+.social-links a i {
+  margin-right: 0;
+  display: block;
+  line-height: 1;
 }
 
 .social-links a:hover {
@@ -1251,6 +1258,8 @@ img {
 .gallery-section {
   padding: 60px 0;
   background-color: var(--bg-dark);
+  min-height: auto;
+  display: block;
 }
 
 .section-header-flex {
@@ -1457,6 +1466,8 @@ img {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  min-height: auto;
+  display: block;
 }
 
 .testimonials-overlay {
@@ -1474,9 +1485,13 @@ img {
   z-index: 2;
 }
 
+.testimonials-section .decorative-separator {
+  margin: 14px auto 0;
+}
+
 .testimonial-slider {
   max-width: 800px;
-  margin: 40px auto 0;
+  margin: 20px auto 0;
   position: relative;
   overflow: hidden;
 }
@@ -1686,7 +1701,11 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+}
+
+.cta-quick-form .form-input-row .form-input-group {
+  margin-bottom: 0;
 }
 
 .cta-quick-form label {
@@ -1936,6 +1955,11 @@ img {
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
   z-index: 99;
   transition: all var(--transition-medium);
+  line-height: 1;
+}
+
+.whatsapp-float-widget i {
+  display: block;
 }
 
 .whatsapp-badge {
@@ -1984,6 +2008,11 @@ img {
   box-shadow: 0 6px 20px rgba(6, 199, 85, 0.4);
   z-index: 99;
   transition: all var(--transition-medium);
+  line-height: 1;
+}
+
+.line-float-widget i {
+  display: block;
 }
 
 .line-badge {
@@ -3150,8 +3179,33 @@ footer {
 }
 
 .simple-contact-page .main-header {
+  position: sticky;
   top: 0;
-  background: rgba(5, 8, 20, 0.95);
+  background: rgba(5, 8, 20, 0.96);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.simple-contact-page .main-header .nav-container {
+  min-height: 108px;
+  align-items: center;
+}
+
+.simple-contact-page .logo-area,
+.simple-contact-page .header-actions,
+.simple-contact-page .nav-menu ul {
+  align-items: center;
+}
+
+.simple-contact-page .main-logo-img {
+  height: 82px;
+}
+
+.simple-contact-page .btn-book-now {
+  min-height: 54px;
+  padding-inline: 28px;
 }
 
 .simple-contact-page .nav-menu {
@@ -3159,7 +3213,35 @@ footer {
 }
 
 .simple-contact-main {
-  padding-top: 120px;
+  padding-top: 0;
+}
+
+.simple-contact-banner {
+  min-height: 72vh;
+  height: 72vh;
+  max-height: 760px;
+}
+
+.simple-contact-banner-content {
+  max-width: 880px;
+  width: min(90%, 880px);
+  margin: 0 auto;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.simple-contact-banner .menu-hero-content {
+  margin: 0 auto !important;
+}
+
+.simple-contact-page .menu-hero-title {
+  font-size: 4.2rem;
+}
+
+.simple-contact-page .menu-hero-subtitle {
+  display: block;
+  margin-top: 18px;
 }
 
 .simple-contact-section {
@@ -3183,6 +3265,35 @@ footer {
   gap: 22px;
 }
 
+.simple-contact-channel-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.simple-contact-channel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(10, 15, 38, 0.45);
+  color: var(--text-light);
+  font-weight: 600;
+  transition: transform var(--transition-medium), border-color var(--transition-medium), background var(--transition-medium);
+}
+
+.simple-contact-channel-btn i {
+  color: var(--gold);
+}
+
+.simple-contact-channel-btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, 0.42);
+  background: rgba(14, 20, 48, 0.72);
+}
+
 .simple-contact-form-card {
   padding: 32px;
   border-radius: 16px;
@@ -3201,9 +3312,17 @@ footer {
   margin-bottom: 0;
 }
 
+.simple-contact-map-block {
+  margin-top: 34px;
+}
+
 @media (max-width: 900px) {
   .simple-contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .simple-contact-channel-row {
+    flex-direction: column;
   }
 }
 
@@ -3539,6 +3658,14 @@ footer {
   padding: 100px 0;
   background-color: var(--bg-dark);
   position: relative;
+  min-height: auto;
+  display: block;
+}
+
+.pillars-section,
+.services-section {
+  min-height: auto;
+  display: block;
 }
 
 .overview-panel {
@@ -3603,6 +3730,22 @@ footer {
   margin-bottom: 8px;
   text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
   transition: color 0.5s ease;
+}
+
+.overview-value-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.05;
+}
+
+.overview-value-stack span:first-child {
+  font-size: 2.5rem;
+}
+
+.overview-value-stack span:last-child {
+  font-size: 1.35rem;
 }
 
 .overview-card:hover .overview-value {
@@ -3720,8 +3863,9 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  margin: 80px 0;
-  padding-bottom: 50px;
+  margin: 60px 0 0;
+  padding-bottom: 0;
+  align-items: stretch;
 }
 
 .pillar-card {
@@ -3733,6 +3877,9 @@ footer {
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .pillar-img-wrapper {
@@ -3774,30 +3921,11 @@ footer {
   transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.pillar-card:nth-child(1) {
-  transform: translateY(0);
-}
-.pillar-card:nth-child(2) {
-  transform: translateY(30px);
-}
-.pillar-card:nth-child(3) {
-  transform: translateY(60px);
-}
-
 .pillar-card:hover {
+  transform: translateY(-10px);
   border-color: rgba(212, 175, 55, 0.45);
   box-shadow: var(--gold-glow), 0 25px 50px rgba(0,0,0,0.5);
   background: linear-gradient(180deg, rgba(10, 15, 38, 0.65) 0%, rgba(5, 8, 20, 0.95) 100%);
-}
-
-.pillar-card:nth-child(1):hover {
-  transform: translateY(-10px);
-}
-.pillar-card:nth-child(2):hover {
-  transform: translateY(20px);
-}
-.pillar-card:nth-child(3):hover {
-  transform: translateY(50px);
 }
 
 .pillar-card:hover::before {
@@ -3833,6 +3961,7 @@ footer {
   position: relative;
   z-index: 2;
   transition: color 0.4s ease;
+  min-height: 88px;
 }
 
 .pillar-card:hover h3 {
@@ -3847,6 +3976,7 @@ footer {
   position: relative;
   z-index: 2;
   transition: color 0.4s ease;
+  flex-grow: 1;
 }
 
 .pillar-card:hover p {
@@ -3857,6 +3987,8 @@ footer {
 .about-testimonials-section {
   padding: 100px 0;
   background-color: var(--bg-dark-secondary);
+  min-height: auto;
+  display: block;
 }
 
 .about-testimonials-grid {
@@ -3935,6 +4067,8 @@ footer {
 .about-contact-section {
   padding: 100px 0;
   background-color: var(--bg-dark);
+  min-height: auto;
+  display: block;
 }
 
 .contact-layout-grid {
@@ -4022,10 +4156,19 @@ footer {
   min-height: 400px;
 }
 
+.contact-map-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 520px;
+  filter: none;
+}
+
 /* Gallery Section Layout */
 .about-gallery-section {
   padding: 100px 0;
   background-color: var(--bg-dark-secondary);
+  min-height: auto;
+  display: block;
 }
 
 /* ==========================================================================
@@ -4097,22 +4240,23 @@ footer {
 }
 
 .menu-hero-title {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 3.8rem;
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
   font-weight: 700;
   color: var(--text-light);
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-shadow: 0 0 35px rgba(212, 175, 55, 0.35), 0 4px 15px rgba(0,0,0,0.8);
 }
 
 .menu-hero-subtitle {
-  font-family: 'Cinzel', serif;
-  font-size: 1.15rem;
-  color: var(--gold);
-  letter-spacing: 5px;
-  margin-top: 15px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+  margin-top: 18px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .menu-specials-section {
@@ -4235,6 +4379,14 @@ footer {
 .menu-tabs-section {
   padding: 100px 0;
   background-color: var(--bg-dark-secondary);
+  min-height: auto;
+  display: block;
+}
+
+.menu-catering-section,
+.menu-contact-section {
+  min-height: auto;
+  display: block;
 }
 
 .menu-tabs-container {
@@ -4605,23 +4757,24 @@ footer {
 }
 
 .pool-hero-title {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 3.8rem;
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
   font-weight: 700;
   color: var(--text-light);
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-shadow: 0 0 35px rgba(212, 175, 55, 0.35), 0 4px 15px rgba(0,0,0,0.8);
 }
 
 .pool-hero-subtitle {
-  font-family: 'Cinzel', serif;
-  font-size: 1.15rem;
-  color: var(--gold);
-  letter-spacing: 5px;
-  margin-top: 15px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+  margin-top: 18px;
   text-transform: uppercase;
   display: block;
+  font-weight: 600;
 }
 
 .pool-intro-section {
@@ -4721,13 +4874,15 @@ footer {
 .pool-booking-section {
   padding: 100px 0;
   background-color: var(--bg-dark-secondary);
+  min-height: auto;
+  display: block;
 }
 
 .pool-booking-grid {
   display: grid;
   grid-template-columns: 1.2fr 1.8fr;
   gap: 50px;
-  align-items: center;
+  align-items: start;
 }
 
 .pool-booking-info h2 {
@@ -4755,6 +4910,10 @@ footer {
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.03);
   position: relative;
+}
+
+.pool-booking-form-wrapper .form-input-row {
+  margin-bottom: 12px;
 }
 
 .pool-booking-form-wrapper::before {
@@ -5071,7 +5230,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .menu-hero-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   .menu-hero-content {
     padding: 30px 20px;
@@ -5080,7 +5239,24 @@ footer {
     grid-template-columns: 1fr;
   }
   .pool-hero-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+  }
+
+  .simple-contact-page .main-header .nav-container {
+    min-height: 84px;
+  }
+
+  .simple-contact-page .main-logo-img {
+    height: 64px;
+  }
+
+  .simple-contact-banner {
+    min-height: 420px;
+    height: 420px;
+  }
+
+  .simple-contact-page .menu-hero-title {
+    font-size: 2.5rem;
   }
   .pool-hero-content {
     padding: 30px 20px;
