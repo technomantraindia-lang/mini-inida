@@ -65,26 +65,17 @@
   <header class="main-header" id="mainHeader">
     <div class="container nav-container">
       <a href="#" class="logo-area" id="logoLink">
-        <div class="logo-symbol">
-          <i class="fa-solid fa-crown gold-symbol"></i>
-        </div>
-        <div class="logo-text">
-          <span class="logo-title">MINI INDIA</span>
-          <span class="logo-subtitle">FOOD & BEVERAGE CO., LTD</span>
-        </div>
+        <img src="assets/images/logo.png" alt="Mini-India Logo" class="main-logo-img">
       </a>
       
       <!-- Nav Menu -->
       <nav class="nav-menu" id="navMenu">
         <ul>
           <li><a href="#" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About Us</a></li>
-          <li><a href="#bhog" class="nav-link">56 Bhog</a></li>
-          <li><a href="#maharaja" class="nav-link">Maharaja's Feast</a></li>
-          <li><a href="#pool-party" class="nav-link">Pool Party</a></li>
-          <li><a href="#songkran" class="nav-link">Songkran</a></li>
-          <li><a href="#venue" class="nav-link">Venue</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="menu.html" class="nav-link">Our Menu</a></li>
+          <li><a href="pool-party.html" class="nav-link">Pool & Party</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
           <li><a href="#events" class="nav-link">Events</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -92,7 +83,7 @@
 
       <!-- Action Button & Mobile Toggle -->
       <div class="header-actions">
-        <button class="btn btn-gold btn-book-now" onclick="openBookingModal('dining')">BOOK NOW</button>
+        <button class="btn btn-gold btn-book-now" onclick="openEnquiryModal('event')">ENQUIRE NOW</button>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
@@ -120,8 +111,7 @@
           A grand Indian food, hospitality, and event destination in Pattaya, Thailand. Experience premium dining, pools, live Bollywood shows, and luxurious celebrations under one royal roof.
         </p>
         <div class="hero-buttons">
-          <button class="btn btn-gold btn-large" onclick="openBookingModal('dining')">BOOK A TABLE</button>
-          <button class="btn btn-outline btn-large" onclick="openEnquiryModal('event')">PLAN YOUR EVENT</button>
+          <button class="btn btn-gold btn-large" onclick="openEnquiryModal('event')">PLAN YOUR EVENT</button>
         </div>
       </div>
     </div>
@@ -140,7 +130,7 @@
           <span class="stat-icon"><i class="fa-solid fa-utensils"></i></span>
           <div class="stat-details">
             <span class="stat-num">Authentic</span>
-            <span class="stat-label">Indian Cuisine</span>
+            <span class="stat-label">Indian, Japanese, Chinese, Thai & Korean</span>
           </div>
         </div>
         <div class="stat-item">
@@ -183,10 +173,10 @@
           <span class="section-tag font-gold">WHO WE ARE</span>
           <h2 class="section-title">Pattaya's Premier Hospitality & Entertainment Landmark</h2>
           <p class="about-text">
-            Mini-India Food & Beverage Co., Ltd is not simply a restaurant—we are Pattaya's grandest multi-concept destination. Established in 2022 and situated right at Sukumvit Road, we bridge the colorful traditions of Indian heritage with the vibrant nightlife and warm spirit of Thailand.
+            Mini-India Food & Beverage Co., Ltd is not simply a restaurant—we are Pattaya's grandest multi-concept dining and entertainment destination. Spanning across our grand campus, we feature 3 distinct premium bars and an extraordinary multi-cuisine menu offering authentic Vegetarian, Non-Vegetarian, Korean, Japanese (featuring top-grade sushi), Chinese, and Thai delicacies.
           </p>
           <p class="about-text">
-            Spanning over 1,000+ guest seating capacities, our campus hosts authentic Indian fine dining, an energetic poolside bar, live theatrical DJ nights, fire dancing, and spectacular banquet facilities for corporate celebrations and royal weddings.
+            For grand celebrations, we boast a magnificent Gala and Party Venue with a seating capacity of 1,000 guests, alongside an exclusive, ultra-luxury 200-capacity premium lounge dedicated to the most prestigious VIP gatherings and premium celebrations.
           </p>
           <div class="about-badges">
             <div class="badge-item">
@@ -237,7 +227,7 @@
             <h3 class="card-title">56 BHOG</h3>
             <span class="card-subtitle">ROYAL VEGETARIAN BUFFET</span>
             <p class="card-desc">A divine vegetarian feast with 56+ traditional royal Indian dishes crafted from secret family recipes.</p>
-            <button class="btn-text" onclick="openBookingModal('56bhog')">EXPLORE <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="btn-text" onclick="openEnquiryModal('catering')">ENQUIRE <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
 
@@ -251,7 +241,7 @@
             <h3 class="card-title">MAHARAJA'S FEAST</h3>
             <span class="card-subtitle">PREMIUM NON-VEG & SEAFOOD</span>
             <p class="card-desc">Indulge in royal meat platters, fresh lobsters, crabs, and premium fusion dishes in a magnificent majestic layout.</p>
-            <button class="btn-text" onclick="openBookingModal('maharaja')">EXPLORE <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="btn-text" onclick="openEnquiryModal('catering')">ENQUIRE <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
 
@@ -655,21 +645,21 @@
           <span class="section-tag font-gold">WHY MINI-INDIA?</span>
           <h2 class="section-title font-white">Why Choose Mini-India?</h2>
           <p class="section-desc font-muted">We bring together the richness of Indian culture, the joy of celebration, and the warmth of premium hospitality under one roof in the heart of Pattaya.</p>
-          <a href="#about" class="btn btn-gold btn-about-us">ABOUT US</a>
+          <a href="about.html" class="btn btn-gold btn-about-us">ABOUT US</a>
         </div>
         
         <div class="why-us-features col-span-2">
           <div class="grid grid-2 features-grid">
             <div class="why-feature-card scroll-anim delay-1">
               <span class="feature-icon"><i class="fa-solid fa-pepper-hot"></i></span>
-              <h4>AUTHENTIC INDIAN FLAVORS</h4>
-              <p>Experience real tastes of India prepared by specialist Indian native chefs using imported spices.</p>
+              <h4>AUTHENTIC INDIAN & ASIAN FLAVORS</h4>
+              <p>Experience real tastes of Indian, Japanese, Thai, Chinese, and Korean cuisines prepared by specialist native chefs using imported spices.</p>
             </div>
             
             <div class="why-feature-card scroll-anim delay-2">
               <span class="feature-icon"><i class="fa-solid fa-champagne-glasses"></i></span>
               <h4>WORLD-CLASS FACILITIES</h4>
-              <p>Luxury dining rooms, vibrant swimming pool, and high-end banquet setups catering for 1,000+ attendees.</p>
+              <p>Luxury dining rooms, 3 distinct premium bars, vibrant swimming pool, and high-end banquet setups catering for 1,000+ attendees.</p>
             </div>
 
             <div class="why-feature-card scroll-anim delay-1">
@@ -758,31 +748,37 @@
         
         <!-- Right Side Frosted Glass Form Card -->
         <div class="cta-right-form-card">
-          <h3 class="form-title">EVENT PLANNER</h3>
-          <span class="form-subtitle">Share event details for a custom proposal</span>
+          <h3 class="form-title">CONTACT US</h3>
+          <span class="form-subtitle">Get in touch with the Host Team</span>
           <form class="cta-quick-form" id="ctaQuickForm">
             <div class="form-input-group">
-              <label for="ctaOccasion"><i class="fa-solid fa-gift"></i> OCCASION</label>
-              <select id="ctaOccasion" required>
-                <option value="" disabled selected>Select Occasion</option>
-                <option value="wedding">Royal Wedding</option>
-                <option value="corporate">Corporate Event</option>
-                <option value="birthday">Birthday Party</option>
-                <option value="reception">Reception Gala</option>
-                <option value="private">Private Celebration</option>
-              </select>
+              <label for="contactName"><i class="fa-solid fa-user"></i> NAME</label>
+              <input type="text" id="contactName" placeholder="Your Name" required>
             </div>
             <div class="form-input-row">
               <div class="form-input-group">
-                <label for="ctaDate"><i class="fa-solid fa-calendar"></i> DATE</label>
-                <input type="date" id="ctaDate" required>
+                <label for="contactPhone"><i class="fa-solid fa-phone"></i> PHONE</label>
+                <input type="tel" id="contactPhone" placeholder="Phone Number" required>
               </div>
               <div class="form-input-group">
-                <label for="ctaGuests"><i class="fa-solid fa-users"></i> GUESTS</label>
-                <input type="number" id="ctaGuests" placeholder="Est. Guests" min="10" required>
+                <label for="contactEmail"><i class="fa-solid fa-envelope"></i> EMAIL</label>
+                <input type="email" id="contactEmail" placeholder="Email Address" required>
               </div>
             </div>
-            <button type="submit" class="btn btn-gold btn-full">GET CUSTOM PROPOSAL</button>
+            <div class="form-input-group">
+              <label for="contactType"><i class="fa-solid fa-question-circle"></i> ENQUIRY TYPE</label>
+              <select id="contactType" required>
+                <option value="general" selected>General Enquiry</option>
+                <option value="dining">Dining Booking</option>
+                <option value="pool">Pool & Party Booking</option>
+                <option value="private">Private Event Booking</option>
+              </select>
+            </div>
+            <div class="form-input-group">
+              <label for="contactMessage"><i class="fa-solid fa-message"></i> MESSAGE</label>
+              <textarea id="contactMessage" rows="3" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold btn-full">SUBMIT ENQUIRY</button>
           </form>
         </div>
 
@@ -797,12 +793,8 @@
         
         <!-- Column 1: Brand Info -->
         <div class="footer-col brand-col">
-          <a href="#" class="logo-area footer-logo">
-            <div class="logo-symbol"><i class="fa-solid fa-crown gold-symbol"></i></div>
-            <div class="logo-text">
-              <span class="logo-title font-white">MINI INDIA</span>
-              <span class="logo-subtitle font-gold">FOOD & BEVERAGE CO.</span>
-            </div>
+          <a href="index.html" class="logo-area footer-logo">
+            <img src="assets/images/logo.png" alt="Mini-India Logo" class="footer-logo-img">
           </a>
           <p class="brand-desc">Pattaya's premier destination for fine Indian dining, pool parties, live cultural performances, and royal celebrations.</p>
           <div class="social-links footer-socials">
@@ -816,14 +808,11 @@
         <div class="footer-col links-col">
           <h4 class="footer-heading">QUICK LINKS</h4>
           <ul class="footer-links">
-            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-            <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-            <li><a href="#bhog"><i class="fa-solid fa-chevron-right"></i> 56 Bhog Buffet</a></li>
-            <li><a href="#maharaja"><i class="fa-solid fa-chevron-right"></i> Maharaja's Feast</a></li>
-            <li><a href="#pool-party"><i class="fa-solid fa-chevron-right"></i> Pool Party & Entertainment</a></li>
-            <li><a href="#songkran"><i class="fa-solid fa-chevron-right"></i> Songkran Pool Party</a></li>
-            <li><a href="#venue"><i class="fa-solid fa-chevron-right"></i> Conference & Gala Venue</a></li>
-            <li><a href="#gallery"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+            <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Our Menu</a></li>
+            <li><a href="pool-party.html"><i class="fa-solid fa-chevron-right"></i> Pool & Party</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
           </ul>
         </div>
 
@@ -853,13 +842,12 @@
         <div class="footer-col hours-payment-col">
           <h4 class="footer-heading">OPERATING HOURS</h4>
           <p class="hours-text"><i class="fa-solid fa-clock"></i> Open Daily: 11:00 AM - 12:00 AM</p>
-          
           <h4 class="footer-heading payment-header">PAYMENT OPTIONS</h4>
           <div class="payment-options">
-            <span class="payment-badge" title="Cash"><i class="fa-solid fa-money-bill-1-wave"></i> Cash</span>
-            <span class="payment-badge" title="Cards"><i class="fa-solid fa-credit-card"></i> Card</span>
-            <span class="payment-badge" title="QR Code"><i class="fa-solid fa-qrcode"></i> QR Pay</span>
-            <span class="payment-badge" title="Bank Transfer"><i class="fa-solid fa-building"></i> Bank</span>
+            <span class="payment-badge"><i class="fa-solid fa-money-bill-wave"></i> Cash</span>
+            <span class="payment-badge"><i class="fa-solid fa-credit-card"></i> Cards</span>
+            <span class="payment-badge"><i class="fa-solid fa-qrcode"></i> QR Pay</span>
+            <span class="payment-badge"><i class="fa-solid fa-building-columns"></i> Transfer</span>
           </div>
         </div>
 
@@ -877,69 +865,19 @@
     </div>
   </footer>
 
+  <!-- LINE Floating Icon -->
+  <a href="https://line.me/ti/p/~+66981807111" class="line-float-widget" target="_blank" aria-label="Chat on LINE">
+    <i class="fa-brands fa-line"></i>
+    <span class="line-badge">Chat on LINE</span>
+  </a>
+
   <!-- WhatsApp Floating Icon -->
   <a href="https://wa.me/66981807111" class="whatsapp-float-widget" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
     <span class="whatsapp-badge">Chat with Us</span>
   </a>
 
-  <!-- Table Booking Modal -->
-  <div class="modal-overlay" id="bookingModal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeBookingModal()">&times;</button>
-      <div class="modal-header">
-        <i class="fa-solid fa-utensils modal-header-icon"></i>
-        <h3>RESERVE A ROYAL TABLE</h3>
-        <p>Experience exquisite flavors at Mini-India Pattaya</p>
-      </div>
-      <form class="modal-form" id="bookingForm">
-        <div class="form-group">
-          <label for="bookingName">Full Name *</label>
-          <input type="text" id="bookingName" required placeholder="Enter your full name">
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="bookingPhone">Phone Number *</label>
-            <input type="tel" id="bookingPhone" required placeholder="+66 9X-XXX-XXXX">
-          </div>
-          <div class="form-group">
-            <label for="bookingEmail">Email Address</label>
-            <input type="email" id="bookingEmail" placeholder="yourname@domain.com">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="bookingExperience">Dining Experience *</label>
-            <select id="bookingExperience" required>
-              <option value="56bhog">56 Bhog - Royal Vegetarian Buffet</option>
-              <option value="maharaja">Maharaja's Feast - Premium Non-Veg & Seafood</option>
-              <option value="general">Standard Dining / Ala Carte</option>
-              <option value="poolside">Poolside Dining Experience</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="bookingGuests">Number of Guests *</label>
-            <input type="number" id="bookingGuests" required min="1" max="100" value="2">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="bookingDate">Date *</label>
-            <input type="date" id="bookingDate" required>
-          </div>
-          <div class="form-group">
-            <label for="bookingTime">Time *</label>
-            <input type="time" id="bookingTime" required min="11:00" max="23:00">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="bookingNotes">Special Requests (Allergies, seating choice, etc.)</label>
-          <textarea id="bookingNotes" rows="3" placeholder="Let us know if you are celebrating a birthday, anniversary, or have vegetarian restrictions..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-gold btn-block">CONFIRM TABLE RESERVATION</button>
-      </form>
-    </div>
-  </div>
+
 
   <!-- Event Enquiry Modal -->
   <div class="modal-overlay" id="enquiryModal">

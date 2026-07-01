@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pool & Party - Mini-India Resort Pattaya</title>
+  <meta name="description" content="Experience Pattaya's premium pool parties at Mini-India. Enjoy the Oasis pool deck, three distinct bars, custom cabanas, Bollywood theme nights, and fire dancing.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Cinzel & Outfit & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700;900&family=Montserrat:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="utility-bar">
+    <div class="container utility-flex">
+      <div class="utility-left">
+        <span><i class="fa-solid fa-location-dot"></i> Pattaya, Thailand</span>
+        <span class="separator">|</span>
+        <span><i class="fa-solid fa-clock"></i> Open Daily: 11:00 AM - 12:00 AM</span>
+      </div>
+      <div class="utility-right">
+        <a href="tel:+66981807111"><i class="fa-solid fa-phone"></i> +66 98 180 7111</a>
+        <span class="separator">|</span>
+        <a href="https://line.me/ti/p/~+66981807111" target="_blank"><i class="fa-brands fa-line"></i> LINE Chat</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo-area" id="logoLink">
+        <img src="assets/images/logo.png" alt="Mini-India Logo" class="main-logo-img">
+      </a>
+      
+      <!-- Nav Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="menu.html" class="nav-link">Our Menu</a></li>
+          <li><a href="#" class="nav-link active">Pool & Party</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="index.html#events" class="nav-link">Events</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div class="header-actions">
+        <button class="btn btn-gold btn-book-now" onclick="openEnquiryModal('event')">ENQUIRE NOW</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Unique Hero Banner -->
+  <section class="pool-hero">
+    <!-- Sliding Luxury Gates -->
+    <div class="pool-hero-gates" id="poolHeroGates">
+      <div class="pool-gate gate-left">
+        <div class="gate-emblem">
+          <i class="fa-solid fa-crown"></i>
+        </div>
+      </div>
+      <div class="pool-gate gate-right">
+        <div class="gate-emblem">
+          <i class="fa-solid fa-crown"></i>
+        </div>
+      </div>
+    </div>
+
+    <img src="assets/images/pool_party_pattaya.png" alt="Pattaya Pool Party at Twilight" class="pool-hero-bg">
+    <div class="pool-hero-overlay"></div>
+    <div class="pool-hero-content">
+      <div class="reveal-text-wrapper"><span class="section-tag font-gold reveal-badge">THE OASIS DECK</span></div>
+      <div class="reveal-text-wrapper"><h1 class="pool-hero-title reveal-title">Pool & Party</h1></div>
+      <div class="reveal-text-wrapper"><span class="pool-hero-subtitle reveal-subtitle">Taste India, Celebrate Thailand</span></div>
+    </div>
+  </section>
+
+  <!-- The Oasis Deck & Bars Section -->
+  <section class="pool-intro-section">
+    <div class="container">
+      <div class="section-header text-center scroll-anim">
+        <span class="section-tag font-gold">THE LANDMARK DECK</span>
+        <h2 class="section-title font-white">The Oasis Deck & Bars</h2>
+        <div class="decorative-separator">
+          <span class="separator-line"></span>
+          <i class="fa-solid fa-crown separator-crown"></i>
+          <span class="separator-line"></span>
+        </div>
+      </div>
+
+      <!-- Feature Grid -->
+      <div class="pool-grid">
+        
+        <!-- Feature 1: Songkran Pool Festival -->
+        <div class="pool-card scroll-anim">
+          <div class="pool-img-wrapper">
+            <span class="menu-special-badge">Daylight Vibe</span>
+            <img src="assets/images/hero_palace_pool.png" alt="Songkran Pool Party" class="pool-card-img">
+          </div>
+          <div class="pool-content">
+            <div>
+              <h3 class="pool-card-title">Songkran Pool Party Experience</h3>
+              <p class="pool-card-desc">Match Pattaya's high-energy entertainment vibes with our legendary water celebrations. Featuring live DJs spinning global and Indian beats, water attractions, color zones, and standard-setting poolside drink services.</p>
+              <ul class="pool-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Live DJs & Sound System</li>
+                <li><i class="fa-solid fa-circle-check"></i> Water Cannon Attractions</li>
+                <li><i class="fa-solid fa-circle-check"></i> Premium Sun Lounger Access</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2: Bollywood Theme Nights -->
+        <div class="pool-card scroll-anim">
+          <div class="pool-img-wrapper">
+            <span class="menu-special-badge">Nightlife Vibe</span>
+            <img src="assets/images/luxury_lounge_bar.png" alt="Bollywood Night Fire Dance" class="pool-card-img">
+          </div>
+          <div class="pool-content">
+            <div>
+              <h3 class="pool-card-title">Bollywood Theme Nights & Fire Shows</h3>
+              <p class="pool-card-desc">As the sun sets, the Oasis deck transforms into a premium, energetic night club. Experience stunning live fire dancing performances, Bollywood theme nights, special guest DJs, and visual effects overlooking the pool.</p>
+              <ul class="pool-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Live Fire Dancing Performers</li>
+                <li><i class="fa-solid fa-circle-check"></i> 3 Distinct Premium Bars</li>
+                <li><i class="fa-solid fa-circle-check"></i> Custom VIP Cabana Seating</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3: VIP Luxury Cabanas & Sunbeds -->
+        <div class="pool-card scroll-anim">
+          <div class="pool-img-wrapper">
+            <span class="menu-special-badge">Lounge Vibe</span>
+            <img src="assets/images/pool_private_hire.png" alt="Luxury Pool Cabanas" class="pool-card-img">
+          </div>
+          <div class="pool-content">
+            <div>
+              <h3 class="pool-card-title">VIP Luxury Cabanas & Sunbeds</h3>
+              <p class="pool-card-desc">Relax in our comfortable, private poolside cabanas and sun loungers. Complete with custom cooling mist systems, plush deck towels, and dedicated button-call deckside service for ultimate tropical comfort.</p>
+              <ul class="pool-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Custom Cooling Mist Systems</li>
+                <li><i class="fa-solid fa-circle-check"></i> Dedicated Personal Deck Waiter</li>
+                <li><i class="fa-solid fa-circle-check"></i> Soft Plush Towel Service</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4: Mixology & Poolside Dining -->
+        <div class="pool-card scroll-anim">
+          <div class="pool-img-wrapper">
+            <span class="menu-special-badge">Tastes Vibe</span>
+            <img src="assets/images/menu_hero_bg.png" alt="Poolside Mixology" class="pool-card-img">
+          </div>
+          <div class="pool-content">
+            <div>
+              <h3 class="pool-card-title">Tropical Mixology & Poolside Dining</h3>
+              <p class="pool-card-desc">Indulge in fresh tropical fusion cocktails, mocktails, and fresh fruit smoothies crafted by native bartenders at our 3 premium bars, paired with a curated menu of delicious Indian and coastal finger foods.</p>
+              <ul class="pool-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> 3 Distinct Poolside Bars</li>
+                <li><i class="fa-solid fa-circle-check"></i> Signature Fusion Mixology</li>
+                <li><i class="fa-solid fa-circle-check"></i> Fresh Indian & Coastal Snacks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Majestic Event Venues & Banquet Halls Section -->
+  <section class="pool-halls-section">
+    <div class="container">
+      <div class="section-header text-center scroll-anim">
+        <span class="section-tag font-gold">PREMIUM EVENT SPACES</span>
+        <h2 class="section-title font-white">Indoor Banquet Halls</h2>
+        <div class="decorative-separator">
+          <span class="separator-line"></span>
+          <i class="fa-solid fa-crown separator-crown"></i>
+          <span class="separator-line"></span>
+        </div>
+      </div>
+
+      <div class="halls-grid">
+        <!-- Hall 1: Grand Gala Hall -->
+        <div class="hall-card scroll-anim">
+          <div class="hall-img-wrapper">
+            <span class="hall-capacity-badge">1,000+ Guests</span>
+            <img src="assets/images/luxury_wedding_gala.png" alt="Grand Gala Banquet Hall" class="hall-card-img">
+          </div>
+          <div class="hall-content">
+            <div>
+              <h3 class="hall-card-title">The Grand Gala Hall</h3>
+              <p class="hall-card-desc">A magnificent, state-of-the-art ballroom designed for monumental celebrations. Perfect for destination royal Indian weddings, massive corporate galas, conventions, and large-scale cultural events in Pattaya.</p>
+              <ul class="hall-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Capacity: 1,000+ Guests</li>
+                <li><i class="fa-solid fa-circle-check"></i> High-Contrast LED Visual Screens</li>
+                <li><i class="fa-solid fa-circle-check"></i> Customized Floral & Theme Decor</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hall 2: VIP Lounge & Seminar Hall -->
+        <div class="hall-card scroll-anim">
+          <div class="hall-img-wrapper">
+            <span class="hall-capacity-badge">200 VIP Capacity</span>
+            <img src="assets/images/luxury_lounge_bar.png" alt="VIP Seminar Lounge Hall" class="hall-card-img">
+          </div>
+          <div class="hall-content">
+            <div>
+              <h3 class="hall-card-title">The Premium VIP Lounge & Seminar Hall</h3>
+              <p class="hall-card-desc">A highly refined, boutique event space offering a premium private setting. Tailored for corporate board meetings, interactive seminars, intimate family gatherings, and upscale VIP receptions.</p>
+              <ul class="hall-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Capacity: 200 Guests</li>
+                <li><i class="fa-solid fa-circle-check"></i> Integrated Audio-Visual System</li>
+                <li><i class="fa-solid fa-circle-check"></i> Private Bar & Dedicated Lounges</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Booking Section -->
+  <section class="pool-booking-section">
+    <div class="container">
+      <div class="pool-booking-grid">
+        
+        <!-- Left Column: Details -->
+        <div class="pool-booking-info scroll-anim">
+          <h2>Host Private Pool Events</h2>
+          <p>Book the Oasis pool deck, our custom cabanas, or full VIP lounge capacity for your private milestones. From high-energy birthday bashes and wedding pool parties to exclusive corporate functions, we offer tailored decorations, dedicated mixology bartenders, and regional buffet options.</p>
+          <div class="contact-detail-item">
+            <span class="contact-detail-icon"><i class="fa-solid fa-circle-info"></i></span>
+            <div class="contact-detail-body">
+              <h4>CAPACITY OPTIONS</h4>
+              <p class="contact-text">Pool Deck: Up to 500 Guests | VIP Lounge: 200 Guests</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Frosted Glass Form Card -->
+        <div class="pool-booking-form-wrapper scroll-anim">
+          <h3 class="form-title">CONTACT US</h3>
+          <span class="form-subtitle">Get in touch with the Oasis Host Team</span>
+          <form class="cta-quick-form" id="ctaQuickForm">
+            <div class="form-input-group">
+              <label for="contactName"><i class="fa-solid fa-user"></i> NAME</label>
+              <input type="text" id="contactName" placeholder="Your Name" required>
+            </div>
+            <div class="form-input-row">
+              <div class="form-input-group">
+                <label for="contactPhone"><i class="fa-solid fa-phone"></i> PHONE</label>
+                <input type="tel" id="contactPhone" placeholder="Phone Number" required>
+              </div>
+              <div class="form-input-group">
+                <label for="contactEmail"><i class="fa-solid fa-envelope"></i> EMAIL</label>
+                <input type="email" id="contactEmail" placeholder="Email Address" required>
+              </div>
+            </div>
+            <div class="form-input-group">
+              <label for="contactType"><i class="fa-solid fa-question-circle"></i> ENQUIRY TYPE</label>
+              <select id="contactType" required>
+                <option value="pool" selected>Pool & Party Booking</option>
+                <option value="dining">Dining Booking</option>
+                <option value="private">Private Event Booking</option>
+                <option value="general">General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-input-group">
+              <label for="contactMessage"><i class="fa-solid fa-message"></i> MESSAGE</label>
+              <textarea id="contactMessage" rows="3" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold btn-full">SUBMIT ENQUIRY</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="grid grid-4 footer-main-grid">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="logo-area footer-logo">
+            <img src="assets/images/logo.png" alt="Mini-India Logo" class="footer-logo-img">
+          </a>
+          <p class="brand-desc">Pattaya's premier destination for fine Indian dining, pool parties, live cultural performances, and royal celebrations.</p>
+          <div class="social-links footer-socials">
+            <a href="https://www.facebook.com/people/Miniindia-Fnb/100086968037300/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/miniindiafnb/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col links-col">
+          <h4 class="footer-heading">QUICK LINKS</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+            <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Our Menu</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Pool & Party</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-heading">CONTACT US</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span class="contact-text">387, Mini-Siam Campus, Moo 6, Sukumvit Road, Pattaya, Thailand-20150</span>
+            </li>
+            <li>
+              <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+66981807111" class="contact-text">+66 98 180 7111</a>
+            </li>
+            <li>
+              <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+              <div class="contact-emails">
+                <a href="mailto:info@miniindiafnb.com">info@miniindiafnb.com</a>
+                <a href="mailto:sales@miniindiafnb.com">sales@miniindiafnb.com</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Hours & Payments -->
+        <div class="footer-col hours-payment-col">
+          <h4 class="footer-heading">OPERATING HOURS</h4>
+          <p class="hours-text"><i class="fa-solid fa-clock"></i> Open Daily: 11:00 AM - 12:00 AM</p>
+          <h4 class="footer-heading payment-header">PAYMENT OPTIONS</h4>
+          <div class="payment-options">
+            <span class="payment-badge"><i class="fa-solid fa-money-bill-wave"></i> Cash</span>
+            <span class="payment-badge"><i class="fa-solid fa-credit-card"></i> Cards</span>
+            <span class="payment-badge"><i class="fa-solid fa-qrcode"></i> QR Pay</span>
+            <span class="payment-badge"><i class="fa-solid fa-building-columns"></i> Transfer</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Sub-Footer -->
+      <div class="sub-footer">
+        <p>&copy; 2026 Mini-India Food & Beverage Co., Ltd. All Rights Reserved.</p>
+        <div class="sub-footer-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LINE Floating Icon -->
+  <a href="https://line.me/ti/p/~+66981807111" class="line-float-widget" target="_blank" aria-label="Chat on LINE">
+    <i class="fa-brands fa-line"></i>
+    <span class="line-badge">Chat on LINE</span>
+  </a>
+
+  <!-- WhatsApp Floating Icon -->
+  <a href="https://wa.me/66981807111" class="whatsapp-float-widget" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-badge">Chat with Us</span>
+  </a>
+
+  <!-- Event Enquiry Modal -->
+  <div class="modal-overlay" id="enquiryModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeEnquiryModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-calendar-days modal-header-icon"></i>
+        <h3>PLAN YOUR ROYAL EVENT</h3>
+        <p>Host weddings, conferences, or parties for 100 to 1,000+ guests</p>
+      </div>
+      <form class="modal-form" id="enquiryForm">
+        <div class="form-group">
+          <label for="enquiryName">Organizer Name *</label>
+          <input type="text" id="enquiryName" required placeholder="Enter organizer/company name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enquiryPhone">Contact Phone *</label>
+            <input type="tel" id="enquiryPhone" required placeholder="+66 9X-XXX-XXXX">
+          </div>
+          <div class="form-group">
+            <label for="enquiryEmail">Email Address *</label>
+            <input type="email" id="enquiryEmail" required placeholder="info@company.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enquiryType">Event Type *</label>
+            <select id="enquiryType" required>
+              <option value="wedding">Destination Royal Indian Wedding</option>
+              <option value="corporate">Corporate Gala / Seminar</option>
+              <option value="poolparty">Songkran / Themed Pool Party</option>
+              <option value="birthday">Milestone Birthday / Anniversary</option>
+              <option value="catering">Outdoor Catering Service</option>
+              <option value="reception">Reception / Private Celebration</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="enquiryGuests">Estimated Guest Count *</label>
+            <select id="enquiryGuests" required>
+              <option value="50-100">50 - 100 Guests</option>
+              <option value="100-200">100 - 200 Guests</option>
+              <option value="200-500">200 - 500 Guests</option>
+              <option value="500-1000">500 - 1,000 Guests</option>
+              <option value="1000+">1,000+ Guests</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="enquiryDate">Preferred Event Date *</label>
+          <input type="date" id="enquiryDate" required>
+        </div>
+        <div class="form-group">
+          <label for="enquiryMessage">Briefly describe your requirements</label>
+          <textarea id="enquiryMessage" rows="3" placeholder="Tell us about your event theme, decoration requirements, specific food choices, and overall goals..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">SUBMIT EVENT ENQUIRY</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div class="modal-overlay lightbox-overlay" id="lightboxModal">
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+      <img src="" alt="Full Screen View" class="lightbox-img" id="lightboxImg">
+      <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="lightbox-caption" id="lightboxCaption">
+        <span class="lightbox-category" id="lightboxCat">CATEGORY</span>
+        <h4 class="lightbox-title" id="lightboxTitle">Image Title</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu - Mini-India Restaurant Pattaya</title>
+  <meta name="description" content="Experience the finest culinary creations at Mini-India Restaurant in Pattaya, Thailand. Taste our royal 56 Bhog, Maharaja's Seafood feast, and global fusion.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Cinzel & Outfit & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700;900&family=Montserrat:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="utility-bar">
+    <div class="container utility-flex">
+      <div class="utility-left">
+        <span><i class="fa-solid fa-location-dot"></i> Pattaya, Thailand</span>
+        <span class="separator">|</span>
+        <span><i class="fa-solid fa-clock"></i> Open Daily: 11:00 AM - 12:00 AM</span>
+      </div>
+      <div class="utility-right">
+        <a href="tel:+66981807111"><i class="fa-solid fa-phone"></i> +66 98 180 7111</a>
+        <span class="separator">|</span>
+        <a href="https://line.me/ti/p/~+66981807111" target="_blank"><i class="fa-brands fa-line"></i> LINE Chat</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo-area" id="logoLink">
+        <img src="assets/images/logo.png" alt="Mini-India Logo" class="main-logo-img">
+      </a>
+      
+      <!-- Nav Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="#" class="nav-link active">Our Menu</a></li>
+          <li><a href="pool-party.html" class="nav-link">Pool & Party</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="index.html#events" class="nav-link">Events</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div class="header-actions">
+        <button class="btn btn-gold btn-book-now" onclick="openEnquiryModal('event')">ENQUIRE NOW</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Unique Hero Banner -->
+  <section class="menu-hero">
+    <img src="assets/images/menu_hero_bg.png" alt="Pattaya Resort Dining" class="menu-hero-bg">
+    <div class="menu-hero-overlay"></div>
+    <div class="menu-hero-content">
+      <h1 class="menu-hero-title">The Royal Menu</h1>
+      <span class="menu-hero-subtitle">Taste India, Celebrate Thailand</span>
+    </div>
+  </section>
+
+  <!-- Our Specials Section -->
+  <section class="menu-specials-section">
+    <div class="container">
+      <div class="section-header text-center scroll-anim">
+        <span class="section-tag font-gold">THE SIGNATURE FEASTS</span>
+        <h2 class="section-title font-white">Our Specials</h2>
+        <div class="decorative-separator">
+          <span class="separator-line"></span>
+          <i class="fa-solid fa-crown separator-crown"></i>
+          <span class="separator-line"></span>
+        </div>
+      </div>
+
+      <div class="menu-specials-grid">
+        <!-- Special 1: 56 Bhog -->
+        <div class="menu-special-card scroll-anim">
+          <div class="menu-special-img-wrapper">
+            <span class="menu-special-badge">Royal Vegetarian</span>
+            <img src="assets/images/56bhog.png" alt="56 Bhog Buffet" class="menu-special-img">
+          </div>
+          <div class="menu-special-content">
+            <h3 class="menu-special-title">56 Bhog – Vegetarian Buffet</h3>
+            <p class="menu-special-desc">Embark on a culinary journey across the 28 states of India. This grand royal vegetarian feast features 56 meticulously prepared dishes—ranging from rich curries and traditional breads to slow-cooked Indian sweets—handcrafted using native spices imported directly from India.</p>
+            <div class="menu-special-callout">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Available daily for lunch & dinner. Walk-ins welcome.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special 2: Maharaja's Feast -->
+        <div class="menu-special-card scroll-anim">
+          <div class="menu-special-img-wrapper">
+            <span class="menu-special-badge">Imperial Feast</span>
+            <img src="assets/images/image.png" alt="Maharaja's Feast" class="menu-special-img">
+          </div>
+          <div class="menu-special-content">
+            <h3 class="menu-special-title">Maharaja's Feast – Non-Veg & Seafood</h3>
+            <p class="menu-special-desc">Indulge like royalty with our premium non-vegetarian selection. Celebrating the coastal riches of Thailand, this imperial feast blends fresh local seafood, slow-cooked tandoori kebabs, rich butter chickens, and aromatic biryanis crafted by native specialist chefs.</p>
+            <div class="menu-special-callout">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Available daily for lunch & dinner. Walk-ins welcome.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Grid Section -->
+  <section class="menu-tabs-section">
+    <div class="container">
+      <div class="section-header text-center scroll-anim">
+        <span class="section-tag font-gold">EXPLORE CUISINES</span>
+        <h2 class="section-title font-white">Culinary Selections</h2>
+        <div class="decorative-separator">
+          <span class="separator-line"></span>
+          <i class="fa-solid fa-crown separator-crown"></i>
+          <span class="separator-line"></span>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="menu-tabs-container scroll-anim">
+        <button class="menu-tab-btn active" data-filter="all">All Dishes</button>
+        <button class="menu-tab-btn" data-filter="indian">Indian Classics</button>
+        <button class="menu-tab-btn" data-filter="japanese-korean">Japanese & Korean</button>
+        <button class="menu-tab-btn" data-filter="thai-chinese">Thai & Chinese</button>
+        <button class="menu-tab-btn" data-filter="drinks">Drinks & Mocktails</button>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="menu-grid scroll-anim">
+        
+        <!-- Item 1: Butter Chicken (Indian) -->
+        <div class="menu-item-card" data-category="indian">
+          <span class="chef-recommend-tag">Chef's Choice</span>
+          <div class="menu-item-img-wrapper">
+            <img src="assets/images/seafood_maharaja_feast.png" alt="Royal Butter Chicken" class="menu-item-img">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-header">
+              <h4 class="menu-item-title">Royal Butter Chicken</h4>
+              <span class="menu-item-price">THB 380</span>
+            </div>
+            <p class="menu-item-desc">Tender charcoal-grilled chicken in a rich, buttery tomato gravy with premium native Indian spices.</p>
+          </div>
+        </div>
+
+        <!-- Item 2: Paneer Tikka (Indian) -->
+        <div class="menu-item-card" data-category="indian">
+          <div class="menu-item-img-wrapper">
+            <img src="assets/images/thali_vegetarian_56.png" alt="Paneer Tikka Lababdar" class="menu-item-img">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-header">
+              <h4 class="menu-item-title">Paneer Tikka Lababdar</h4>
+              <span class="menu-item-price">THB 320</span>
+            </div>
+            <p class="menu-item-desc">Marinated paneer cubes cooked in a cream-infused onion-tomato masala with freshly ground spices.</p>
+          </div>
+        </div>
+
+        <!-- Item 3: Dum Pukht Biryani (Indian) -->
+        <div class="menu-item-card" data-category="indian">
+          <div class="menu-item-img-wrapper">
+            <img src="assets/images/pillar_culinary.png" alt="Dum Pukht Biryani" class="menu-item-img">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-header">
+              <h4 class="menu-item-title">Dum Pukht Biryani</h4>
+              <span class="menu-item-price">THB 350</span>
+            </div>
+            <p class="menu-item-desc">Aromatic basmati rice cooked on slow dum with fresh herbs, saffron, and choice of tender meat.</p>
+          </div>
+        </div>
+
+        <!-- Item 4: Sushi Platter (Japanese & Korean) -->
+        <div class="menu-item-card" data-category="japanese-korean">
+          <span class="chef-recommend-tag">Must Try</span>
+          <div class="menu-item-img-wrapper">
+            <img src="assets/images/menu_japanese_korean.png" alt="Signature Sushi Platter" class="menu-item-img">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-header">
+              <h4 class="menu-item-title">Signature Sushi Platter</h4>
+              <span class="menu-item-price">THB 550</span>
+            </div>
+            <p class="menu-item-desc">Chef's selection of fresh salmon sashimi, tuna nigiri, and premium dragon sushi rolls.</p>
+          </div>
+        </div>
+
+        <!-- Item 5: Korean BBQ (Japanese & Korean) -->
+        <div class="menu-item-card" data-category="japanese-korean">
+          <div class="menu-item-img-wrapper">
+            <img src="assets/images/luxury_lounge_bar.png" alt="Korean BBQ Platter" class="menu-item-img">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-header">
+              <h4 class="menu-item-title">Korean BBQ Platter</h4>
+              <span class="menu-item-price">THB 590</span>
+            </div>
+            <p class="menu-item-desc">Sizzling thinly sliced marinated beef ribeye (bulgogi) served with kimchi and fresh lettuce wraps.</p>
+          </div>
+        </div>
+
+        <!-- Item 6: Pad Thai (Thai & Chinese) -->
+        <div class="menu-item-card" data-category="thai-chinese">
+          <div class="menu-item-img-wrapper">
+            <img src="assets/images/menu_chinese_thai.png" alt="Pattaya Seafood Pad Thai" class="menu-item-img">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-header">
+              <h4 class="menu-item-title">Seafood Pad Thai</h4>
+              <span class="menu-item-price">THB 280</span>
+            </div>
+            <p class="menu-item-desc">Stir-fried rice noodles with giant coastal prawns, fresh tofu, peanuts, and rich tamarind glaze.</p>
+          </div>
+        </div>
+
+        <!-- Item 7: Dim Sum (Thai & Chinese) -->
+        <div class="menu-item-card" data-category="thai-chinese">
+          <div class="menu-item-img-wrapper">
+            <img src="assets/images/luxury_wedding_gala.png" alt="Royal Dim Sum Basket" class="menu-item-img">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-header">
+              <h4 class="menu-item-title">Royal Dim Sum Basket</h4>
+              <span class="menu-item-price">THB 240</span>
+            </div>
+            <p class="menu-item-desc">Steamed crystal shrimp hargow and chicken siu mai served in traditional bamboo baskets.</p>
+          </div>
+        </div>
+
+        <!-- Item 8: Mango Lassi (Drinks) -->
+        <div class="menu-item-card" data-category="drinks">
+          <div class="menu-item-img-wrapper">
+            <img src="assets/images/hero_palace_pool.png" alt="Mango Lassi Mocktail" class="menu-item-img">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-header">
+              <h4 class="menu-item-title">Mango Lassi Mocktail</h4>
+              <span class="menu-item-price">THB 150</span>
+            </div>
+            <p class="menu-item-desc">Creamy, rich sweet mango smoothie blended with premium thick yogurt and cardamom pods.</p>
+          </div>
+        </div>
+
+        <!-- Item 9: Tom Yum Cocktail (Drinks) -->
+        <div class="menu-item-card" data-category="drinks">
+          <span class="chef-recommend-tag">Specialty</span>
+          <div class="menu-item-img-wrapper">
+            <img src="assets/images/pillar_oasis.png" alt="Tom Yum Cocktail" class="menu-item-img">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-header">
+              <h4 class="menu-item-title">Tom Yum Cocktail</h4>
+              <span class="menu-item-price">THB 280</span>
+            </div>
+            <p class="menu-item-desc">A signature tropical fusion of vodka, lemongrass, galangal, kaffir lime, and red chili extract.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Centered Glassmorphic Contact Section -->
+  <section class="menu-contact-section">
+    <div class="container">
+      <div class="menu-contact-banner scroll-anim">
+        <h2 class="menu-contact-title">Group Bookings & Dining Enquiries</h2>
+        <p class="menu-contact-desc">We accommodate walk-ins, premium table selections, and group celebrations daily. For large gatherings, custom menus, or dining questions, please reach our host team directly.</p>
+        <div class="menu-contact-actions">
+          <a href="https://line.me/ti/p/~+66981807111" target="_blank" class="btn btn-gold"><i class="fa-brands fa-line"></i> CONNECT ON LINE</a>
+          <a href="tel:+66981807111" class="btn btn-outline"><i class="fa-solid fa-phone"></i> CALL +66 98 180 7111</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="grid grid-4 footer-main-grid">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="logo-area footer-logo">
+            <img src="assets/images/logo.png" alt="Mini-India Logo" class="footer-logo-img">
+          </a>
+          <p class="brand-desc">Pattaya's premier destination for fine Indian dining, pool parties, live cultural performances, and royal celebrations.</p>
+          <div class="social-links footer-socials">
+            <a href="https://www.facebook.com/people/Miniindia-Fnb/100086968037300/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/miniindiafnb/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col links-col">
+          <h4 class="footer-heading">QUICK LINKS</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Our Menu</a></li>
+            <li><a href="pool-party.html"><i class="fa-solid fa-chevron-right"></i> Pool & Party</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-heading">CONTACT US</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span class="contact-text">387, Mini-Siam Campus, Moo 6, Sukumvit Road, Pattaya, Thailand-20150</span>
+            </li>
+            <li>
+              <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+66981807111" class="contact-text">+66 98 180 7111</a>
+            </li>
+            <li>
+              <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+              <div class="contact-emails">
+                <a href="mailto:info@miniindiafnb.com">info@miniindiafnb.com</a>
+                <a href="mailto:sales@miniindiafnb.com">sales@miniindiafnb.com</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Hours & Payments -->
+        <div class="footer-col hours-payment-col">
+          <h4 class="footer-heading">OPERATING HOURS</h4>
+          <p class="hours-text"><i class="fa-solid fa-clock"></i> Open Daily: 11:00 AM - 12:00 AM</p>
+          <h4 class="footer-heading payment-header">PAYMENT OPTIONS</h4>
+          <div class="payment-options">
+            <span class="payment-badge"><i class="fa-solid fa-money-bill-wave"></i> Cash</span>
+            <span class="payment-badge"><i class="fa-solid fa-credit-card"></i> Cards</span>
+            <span class="payment-badge"><i class="fa-solid fa-qrcode"></i> QR Pay</span>
+            <span class="payment-badge"><i class="fa-solid fa-building-columns"></i> Transfer</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Sub-Footer -->
+      <div class="sub-footer">
+        <p>&copy; 2026 Mini-India Food & Beverage Co., Ltd. All Rights Reserved.</p>
+        <div class="sub-footer-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LINE Floating Icon -->
+  <a href="https://line.me/ti/p/~+66981807111" class="line-float-widget" target="_blank" aria-label="Chat on LINE">
+    <i class="fa-brands fa-line"></i>
+    <span class="line-badge">Chat on LINE</span>
+  </a>
+
+  <!-- WhatsApp Floating Icon -->
+  <a href="https://wa.me/66981807111" class="whatsapp-float-widget" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-badge">Chat with Us</span>
+  </a>
+
+  <!-- Event Enquiry Modal -->
+  <div class="modal-overlay" id="enquiryModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeEnquiryModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-calendar-days modal-header-icon"></i>
+        <h3>PLAN YOUR ROYAL EVENT</h3>
+        <p>Host weddings, conferences, or parties for 100 to 1,000+ guests</p>
+      </div>
+      <form class="modal-form" id="enquiryForm">
+        <div class="form-group">
+          <label for="enquiryName">Organizer Name *</label>
+          <input type="text" id="enquiryName" required placeholder="Enter organizer/company name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enquiryPhone">Contact Phone *</label>
+            <input type="tel" id="enquiryPhone" required placeholder="+66 9X-XXX-XXXX">
+          </div>
+          <div class="form-group">
+            <label for="enquiryEmail">Email Address *</label>
+            <input type="email" id="enquiryEmail" required placeholder="info@company.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enquiryType">Event Type *</label>
+            <select id="enquiryType" required>
+              <option value="wedding">Destination Royal Indian Wedding</option>
+              <option value="corporate">Corporate Gala / Seminar</option>
+              <option value="poolparty">Songkran / Themed Pool Party</option>
+              <option value="birthday">Milestone Birthday / Anniversary</option>
+              <option value="catering">Outdoor Catering Service</option>
+              <option value="reception">Reception / Private Celebration</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="enquiryGuests">Estimated Guest Count *</label>
+            <select id="enquiryGuests" required>
+              <option value="50-100">50 - 100 Guests</option>
+              <option value="100-200">100 - 200 Guests</option>
+              <option value="200-500">200 - 500 Guests</option>
+              <option value="500-1000">500 - 1,000 Guests</option>
+              <option value="1000+">1,000+ Guests</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="enquiryDate">Preferred Event Date *</label>
+          <input type="date" id="enquiryDate" required>
+        </div>
+        <div class="form-group">
+          <label for="enquiryMessage">Briefly describe your requirements</label>
+          <textarea id="enquiryMessage" rows="3" placeholder="Tell us about your event theme, decoration requirements, specific food choices, and overall goals..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">SUBMIT EVENT ENQUIRY</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div class="modal-overlay lightbox-overlay" id="lightboxModal">
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+      <img src="" alt="Full Screen View" class="lightbox-img" id="lightboxImg">
+      <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="lightbox-caption" id="lightboxCaption">
+        <span class="lightbox-category" id="lightboxCat">CATEGORY</span>
+        <h4 class="lightbox-title" id="lightboxTitle">Image Title</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

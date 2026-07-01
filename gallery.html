@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery - Mini-India Resort Pattaya</title>
+  <meta name="description" content="Explore the premium photo gallery of Mini-India Restaurant & Resort in Pattaya, Thailand. View our dining halls, luxury pool deck, tandoor kitchens, and fire events.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Cinzel & Outfit & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700;900&family=Montserrat:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="utility-bar">
+    <div class="container utility-flex">
+      <div class="utility-left">
+        <span><i class="fa-solid fa-location-dot"></i> Pattaya, Thailand</span>
+        <span class="separator">|</span>
+        <span><i class="fa-solid fa-clock"></i> Open Daily: 11:00 AM - 12:00 AM</span>
+      </div>
+      <div class="utility-right">
+        <a href="tel:+66981807111"><i class="fa-solid fa-phone"></i> +66 98 180 7111</a>
+        <span class="separator">|</span>
+        <a href="https://line.me/ti/p/~+66981807111" target="_blank"><i class="fa-brands fa-line"></i> LINE Chat</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo-area" id="logoLink">
+        <img src="assets/images/logo.png" alt="Mini-India Logo" class="main-logo-img">
+      </a>
+      
+      <!-- Nav Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="menu.html" class="nav-link">Our Menu</a></li>
+          <li><a href="pool-party.html" class="nav-link">Pool & Party</a></li>
+          <li><a href="#" class="nav-link active">Gallery</a></li>
+          <li><a href="index.html#events" class="nav-link">Events</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div class="header-actions">
+        <button class="btn btn-gold btn-book-now" onclick="openEnquiryModal('event')">ENQUIRE NOW</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Unique Hero Banner -->
+  <section class="menu-hero">
+    <img src="assets/images/gallery/paety.png" alt="Pattaya Celebrations Gallery" class="menu-hero-bg">
+    <div class="menu-hero-overlay"></div>
+    <div class="menu-hero-content">
+      <h1 class="menu-hero-title">Photo Gallery</h1>
+      <span class="menu-hero-subtitle">Taste India, Celebrate Thailand</span>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-header text-center scroll-anim">
+        <span class="section-tag font-gold font-light">VISUAL JOURNEY</span>
+        <h2 class="section-title font-white">Capturing Royal Moments</h2>
+        <div class="decorative-separator">
+          <span class="separator-line"></span>
+          <i class="fa-solid fa-crown separator-crown"></i>
+          <span class="separator-line"></span>
+        </div>
+      </div>
+      
+      <!-- Category Filter Tabs -->
+      <div class="gallery-filters scroll-anim" style="justify-content: center;">
+        <span class="filter-tag active" data-filter="all">All Photos</span>
+        <span class="filter-tag" data-filter="dining">Dining & Buffets</span>
+        <span class="filter-tag" data-filter="pool">Pool & Oasis Deck</span>
+        <span class="filter-tag" data-filter="bars">Bars & VIP Lounges</span>
+        <span class="filter-tag" data-filter="events">Gala Events & Parties</span>
+      </div>
+      
+      <!-- Interactive Grid -->
+      <div class="gallery-grid scroll-anim">
+        
+        <!-- Item 1: food -->
+        <div class="gallery-item" data-category="dining">
+          <img src="assets/images/gallery/food.png" alt="Premium Buffet Spread">
+          <div class="gallery-hover">
+            <span class="gallery-category">Dining & Buffets</span>
+            <h4 class="gallery-item-title">Premium Buffet Spread</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+        <!-- Item 2: pool -->
+        <div class="gallery-item" data-category="pool">
+          <img src="assets/images/gallery/pool.png" alt="Resort Swimming Pool Area">
+          <div class="gallery-hover">
+            <span class="gallery-category">Pool & Oasis Deck</span>
+            <h4 class="gallery-item-title">Resort Swimming Pool</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+        <!-- Item 3: pool2 -->
+        <div class="gallery-item" data-category="pool">
+          <img src="assets/images/gallery/pool2.png" alt="Oasis Deck Custom Cabanas">
+          <div class="gallery-hover">
+            <span class="gallery-category">Pool & Oasis Deck</span>
+            <h4 class="gallery-item-title">Oasis Deck VIP Cabanas</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+        <!-- Item 4: pool3 -->
+        <div class="gallery-item" data-category="pool">
+          <img src="assets/images/gallery/pool3.png" alt="Twilight Poolside Lighting">
+          <div class="gallery-hover">
+            <span class="gallery-category">Pool & Oasis Deck</span>
+            <h4 class="gallery-item-title">Twilight Poolside Glow</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+        <!-- Item 5: bar -->
+        <div class="gallery-item" data-category="bars">
+          <img src="assets/images/gallery/bar.png" alt="Oasis Premium Bar Lounge">
+          <div class="gallery-hover">
+            <span class="gallery-category">Bars & VIP Lounges</span>
+            <h4 class="gallery-item-title">Oasis Premium Bar Lounge</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+        <!-- Item 6: bar2 -->
+        <div class="gallery-item" data-category="bars">
+          <img src="assets/images/gallery/bar2.png" alt="Tropical Mixology Bar">
+          <div class="gallery-hover">
+            <span class="gallery-category">Bars & VIP Lounges</span>
+            <h4 class="gallery-item-title">Tropical Mixology Bar</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+        <!-- Item 7: banquet -->
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/gallery/banquet.png" alt="Majestic Grand Gala Banquet">
+          <div class="gallery-hover">
+            <span class="gallery-category">Gala Events & Parties</span>
+            <h4 class="gallery-item-title">Grand Gala Banquet Setup</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+        <!-- Item 8: dj party -->
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/gallery/dj party.png" alt="High-Energy DJ Concert Stage">
+          <div class="gallery-hover">
+            <span class="gallery-category">Gala Events & Parties</span>
+            <h4 class="gallery-item-title">DJ Concert Party Stage</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+        <!-- Item 9: fireevent -->
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/gallery/fireevent .png" alt="Spectacular Live Fire Dancing">
+          <div class="gallery-hover">
+            <span class="gallery-category">Gala Events & Parties</span>
+            <h4 class="gallery-item-title">Spectacular Fire Performance</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+        <!-- Item 10: hall -->
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/gallery/hall.png" alt="Grand Gala Ballroom Hall">
+          <div class="gallery-hover">
+            <span class="gallery-category">Gala Events & Parties</span>
+            <h4 class="gallery-item-title">Grand Gala Ballroom Hall</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+        <!-- Item 11: paety -->
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/gallery/paety.png" alt="Vibrant Bollywood Party Night">
+          <div class="gallery-hover">
+            <span class="gallery-category">Gala Events & Parties</span>
+            <h4 class="gallery-item-title">Bollywood Night Dance Celebrations</h4>
+            <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="grid grid-4 footer-main-grid">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="logo-area footer-logo">
+            <img src="assets/images/logo.png" alt="Mini-India Logo" class="footer-logo-img">
+          </a>
+          <p class="brand-desc">Pattaya's premier destination for fine Indian dining, pool parties, live cultural performances, and royal celebrations.</p>
+          <div class="social-links footer-socials">
+            <a href="https://www.facebook.com/people/Miniindia-Fnb/100086968037300/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/miniindiafnb/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col links-col">
+          <h4 class="footer-heading">QUICK LINKS</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+            <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Our Menu</a></li>
+            <li><a href="pool-party.html"><i class="fa-solid fa-chevron-right"></i> Pool & Party</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-heading">CONTACT US</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span class="contact-text">387, Mini-Siam Campus, Moo 6, Sukumvit Road, Pattaya, Thailand-20150</span>
+            </li>
+            <li>
+              <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+66981807111" class="contact-text">+66 98 180 7111</a>
+            </li>
+            <li>
+              <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+              <div class="contact-emails">
+                <a href="mailto:info@miniindiafnb.com">info@miniindiafnb.com</a>
+                <a href="mailto:sales@miniindiafnb.com">sales@miniindiafnb.com</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Hours & Payments -->
+        <div class="footer-col hours-payment-col">
+          <h4 class="footer-heading">OPERATING HOURS</h4>
+          <p class="hours-text"><i class="fa-solid fa-clock"></i> Open Daily: 11:00 AM - 12:00 AM</p>
+          <h4 class="footer-heading payment-header">PAYMENT OPTIONS</h4>
+          <div class="payment-options">
+            <span class="payment-badge"><i class="fa-solid fa-money-bill-wave"></i> Cash</span>
+            <span class="payment-badge"><i class="fa-solid fa-credit-card"></i> Cards</span>
+            <span class="payment-badge"><i class="fa-solid fa-qrcode"></i> QR Pay</span>
+            <span class="payment-badge"><i class="fa-solid fa-building-columns"></i> Transfer</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Sub-Footer -->
+      <div class="sub-footer">
+        <p>&copy; 2026 Mini-India Food & Beverage Co., Ltd. All Rights Reserved.</p>
+        <div class="sub-footer-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LINE Floating Icon -->
+  <a href="https://line.me/ti/p/~+66981807111" class="line-float-widget" target="_blank" aria-label="Chat on LINE">
+    <i class="fa-brands fa-line"></i>
+    <span class="line-badge">Chat on LINE</span>
+  </a>
+
+  <!-- WhatsApp Floating Icon -->
+  <a href="https://wa.me/66981807111" class="whatsapp-float-widget" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-badge">Chat with Us</span>
+  </a>
+
+  <!-- Event Enquiry Modal -->
+  <div class="modal-overlay" id="enquiryModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeEnquiryModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-calendar-days modal-header-icon"></i>
+        <h3>PLAN YOUR ROYAL EVENT</h3>
+        <p>Host weddings, conferences, or parties for 100 to 1,000+ guests</p>
+      </div>
+      <form class="modal-form" id="enquiryForm">
+        <div class="form-group">
+          <label for="enquiryName">Organizer Name *</label>
+          <input type="text" id="enquiryName" required placeholder="Enter organizer/company name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enquiryPhone">Contact Phone *</label>
+            <input type="tel" id="enquiryPhone" required placeholder="+66 9X-XXX-XXXX">
+          </div>
+          <div class="form-group">
+            <label for="enquiryEmail">Email Address *</label>
+            <input type="email" id="enquiryEmail" required placeholder="info@company.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enquiryType">Event Type *</label>
+            <select id="enquiryType" required>
+              <option value="wedding">Destination Royal Indian Wedding</option>
+              <option value="corporate">Corporate Gala / Seminar</option>
+              <option value="poolparty">Songkran / Themed Pool Party</option>
+              <option value="birthday">Milestone Birthday / Anniversary</option>
+              <option value="catering">Outdoor Catering Service</option>
+              <option value="reception">Reception / Private Celebration</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="enquiryGuests">Estimated Guest Count *</label>
+            <select id="enquiryGuests" required>
+              <option value="50-100">50 - 100 Guests</option>
+              <option value="100-200">100 - 200 Guests</option>
+              <option value="200-500">200 - 500 Guests</option>
+              <option value="500-1000">500 - 1,000 Guests</option>
+              <option value="1000+">1,000+ Guests</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="enquiryDate">Preferred Event Date *</label>
+          <input type="date" id="enquiryDate" required>
+        </div>
+        <div class="form-group">
+          <label for="enquiryMessage">Briefly describe your requirements</label>
+          <textarea id="enquiryMessage" rows="3" placeholder="Tell us about your event theme, decoration requirements, specific food choices, and overall goals..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">SUBMIT EVENT ENQUIRY</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div class="modal-overlay lightbox-overlay" id="lightboxModal">
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+      <img src="" alt="Full Screen View" class="lightbox-img" id="lightboxImg">
+      <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="lightbox-caption" id="lightboxCaption">
+        <span class="lightbox-category" id="lightboxCat">CATEGORY</span>
+        <h4 class="lightbox-title" id="lightboxTitle">Image Title</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

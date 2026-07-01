@@ -4,7 +4,7 @@
  * tabs, image gallery filters, lightboxes, and booking modals.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+const init = () => {
   
   // ==========================================================================
   // 0. Premium Preloader Animation Sequence
@@ -42,16 +42,41 @@ document.addEventListener('DOMContentLoaded', () => {
       preloader.classList.add('hide');
       document.body.style.overflow = '';
       
+      // Completely remove preloader from layout after transition ends (1.2s)
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1200);
+      
       // Trigger hero entry animations
       const heroSection = document.getElementById('hero');
       if (heroSection) {
         heroSection.classList.add('loaded');
+      }
+      
+      // Trigger About page doors animation
+      const aboutHeroDoors = document.getElementById('aboutHeroDoors');
+      if (aboutHeroDoors) {
+        aboutHeroDoors.classList.add('open-doors');
       }
     }, 2900);
   } else {
     document.body.style.overflow = '';
     const heroSection = document.getElementById('hero');
     if (heroSection) heroSection.classList.add('loaded');
+    
+    const aboutHeroDoors = document.getElementById('aboutHeroDoors');
+    if (aboutHeroDoors) {
+      setTimeout(() => {
+        aboutHeroDoors.classList.add('open-doors');
+      }, 2000);
+    }
+    
+    const poolHeroGates = document.getElementById('poolHeroGates');
+    if (poolHeroGates) {
+      setTimeout(() => {
+        poolHeroGates.classList.add('open-gates');
+      }, 1500);
+    }
   }
 
   // 1. Custom Trailing Cursor removed.
@@ -152,6 +177,41 @@ document.addEventListener('DOMContentLoaded', () => {
         panel.classList.remove('active');
         if (panel.getAttribute('id') === targetId) {
           panel.classList.add('active');
+        }
+      });
+    });
+  });
+
+  // ==========================================================================
+  // 5b. Interactive Menu Page Tab Filtering
+  // ==========================================================================
+  const menuTabBtns = document.querySelectorAll('.menu-tab-btn');
+  const menuItemCards = document.querySelectorAll('.menu-item-card');
+  
+  menuTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filterValue = btn.getAttribute('data-filter');
+      
+      // Update active state on buttons
+      menuTabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      // Filter menu items
+      menuItemCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        
+        if (filterValue === 'all' || category === filterValue) {
+          card.classList.remove('hide');
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'scale(1)';
+          }, 50);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            card.classList.add('hide');
+          }, 300);
         }
       });
     });
@@ -273,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Keyboard bindings for Lightbox
   document.addEventListener('keydown', (e) => {
-    if (!lightboxModal.classList.contains('active')) return;
+    if (!lightboxModal || !lightboxModal.classList.contains('active')) return;
     
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowRight' && lightboxNext) lightboxNext.click();
@@ -347,28 +407,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 9. Reservation & Enquiry Form Handler
+  // 9. Enquiry Form Handler
   // ==========================================================================
-  const bookingForm = document.getElementById('bookingForm');
   const enquiryForm = document.getElementById('enquiryForm');
-  
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const name = document.getElementById('bookingName').value;
-      const guests = document.getElementById('bookingGuests').value;
-      const date = document.getElementById('bookingDate').value;
-      const time = document.getElementById('bookingTime').value;
-      const experience = document.getElementById('bookingExperience').value;
-      
-      // Custom premium alert box overlay
-      alert(`Dhanyavaad (Thank you), ${name}! Your table reservation for ${guests} guests for the ${experience} experience on ${date} at ${time} has been requested. We will contact you shortly via call to confirm.`);
-      
-      closeBookingModal();
-      bookingForm.reset();
-    });
-  }
   
   if (enquiryForm) {
     enquiryForm.addEventListener('submit', (e) => {
@@ -427,48 +468,22 @@ document.addEventListener('DOMContentLoaded', () => {
   if (ctaQuickForm) {
     ctaQuickForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Thank you for planning with Mini-India! A royal event manager will call you within 24 hours with a custom proposal.');
+      alert('Thank you for contacting Mini-India! Our host team will get back to you shortly.');
       ctaQuickForm.reset();
     });
   }
 
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 
 // ==========================================================================================
 // 10. Global Modal Controls (Exposed to HTML)
 // ==========================================================================
-
-function openBookingModal(experienceType = '') {
-  const modal = document.getElementById('bookingModal');
-  const experienceSelect = document.getElementById('bookingExperience');
-  
-  if (experienceSelect && experienceType) {
-    // Mapping keys to drop-down list values
-    if (experienceType === '56bhog') experienceSelect.value = '56bhog';
-    else if (experienceType === 'maharaja') experienceSelect.value = 'maharaja';
-    else if (experienceType === 'dining') experienceSelect.value = 'general';
-  }
-  
-  // Set min date of form dynamically to today
-  const dateInput = document.getElementById('bookingDate');
-  if (dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.min = today;
-  }
-  
-  if (modal) {
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Stop background scrolls
-  }
-}
-
-function closeBookingModal() {
-  const modal = document.getElementById('bookingModal');
-  if (modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-}
 
 function openEnquiryModal(eventType = '') {
   const modal = document.getElementById('enquiryModal');
@@ -506,9 +521,6 @@ function closeEnquiryModal() {
 
 // Close modals clicking outside
 window.addEventListener('click', (e) => {
-  const bookingModal = document.getElementById('bookingModal');
   const enquiryModal = document.getElementById('enquiryModal');
-  
-  if (e.target === bookingModal) closeBookingModal();
   if (e.target === enquiryModal) closeEnquiryModal();
 });
