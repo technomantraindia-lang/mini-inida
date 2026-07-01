@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="simple-contact-html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Mini-India Food & Beverage Co., Ltd</title>
+
+  <meta name="description" content="Contact Mini-India Pattaya for reservations, events, weddings, catering, and private enquiries.">
+  <meta name="keywords" content="Mini-India contact, Pattaya enquiry, Mini-India reservation, wedding venue Pattaya">
+  <meta name="author" content="Mini-India Food & Beverage Co., Ltd">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us | Mini-India Pattaya">
+  <meta property="og:description" content="Get in touch with Mini-India for dining, events, and private celebrations in Pattaya.">
+  <meta property="og:image" content="assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="simple-contact-page">
+
+  <header class="main-header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-area" id="logoLink">
+        <img src="assets/images/logo.png" alt="Mini-India Logo" class="main-logo-img">
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="menu.html" class="nav-link">Our Menu</a></li>
+          <li><a href="pool-party.html" class="nav-link">Pool & Party</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="#" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contactInquiryForm" class="btn btn-gold btn-book-now">ENQUIRE NOW</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="simple-contact-main">
+    <section class="simple-contact-section">
+      <div class="container">
+        <div class="simple-contact-header text-center">
+          <span class="section-tag font-gold">CONTACT US</span>
+          <h1 class="section-title">Get In Touch With Mini-India</h1>
+          <p class="section-subtitle font-muted">For reservations, weddings, private events, catering, and general enquiries.</p>
+        </div>
+
+        <div class="simple-contact-grid">
+          <div class="simple-contact-details">
+            <div class="contact-detail-item">
+              <span class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <div class="contact-detail-body">
+                <h4>ADDRESS</h4>
+                <p>387, Mini-Siam Campus, Moo 6, Sukumvit Road, Pattaya, Thailand-20150</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <span class="contact-detail-icon"><i class="fa-solid fa-phone"></i></span>
+              <div class="contact-detail-body">
+                <h4>PHONE</h4>
+                <a href="tel:+66981807111">+66 98 180 7111</a>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <span class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></span>
+              <div class="contact-detail-body">
+                <h4>EMAIL</h4>
+                <p><a href="mailto:info@miniindiafnb.com">info@miniindiafnb.com</a></p>
+                <p><a href="mailto:sales@miniindiafnb.com">sales@miniindiafnb.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <span class="contact-detail-icon"><i class="fa-solid fa-clock"></i></span>
+              <div class="contact-detail-body">
+                <h4>OPERATING HOURS</h4>
+                <p>Open Daily: 11:00 AM - 12:00 AM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="simple-contact-form-card" id="contactInquiryForm">
+            <h3 class="simple-contact-form-title">Send An Enquiry</h3>
+            <form class="contact-premium-form simple-contact-form" id="contactPremiumForm">
+              <div class="contact-form-two-col">
+                <div class="form-input-group">
+                  <label for="contactLeadName"><i class="fa-solid fa-user"></i> FULL NAME</label>
+                  <input type="text" id="contactLeadName" placeholder="Your full name" required>
+                </div>
+                <div class="form-input-group">
+                  <label for="contactLeadPhone"><i class="fa-solid fa-phone"></i> PHONE NUMBER</label>
+                  <input type="tel" id="contactLeadPhone" placeholder="+66 9X-XXX-XXXX" required>
+                </div>
+              </div>
+
+              <div class="contact-form-two-col">
+                <div class="form-input-group">
+                  <label for="contactLeadEmail"><i class="fa-solid fa-envelope"></i> EMAIL ADDRESS</label>
+                  <input type="email" id="contactLeadEmail" placeholder="name@example.com" required>
+                </div>
+                <div class="form-input-group">
+                  <label for="contactEnquiryType"><i class="fa-solid fa-list"></i> ENQUIRY TYPE</label>
+                  <select id="contactEnquiryType" required>
+                    <option value="reservation">Dining Reservation</option>
+                    <option value="event">Private Event</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="pool">Pool Party</option>
+                    <option value="catering">Catering</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-input-group">
+                <label for="contactMessageField"><i class="fa-solid fa-message"></i> MESSAGE</label>
+                <textarea id="contactMessageField" rows="6" placeholder="Write your enquiry here" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-gold btn-block">SEND ENQUIRY</button>
+              <p class="contact-form-status" id="contactFormStatus" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

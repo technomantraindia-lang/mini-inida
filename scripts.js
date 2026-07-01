@@ -473,6 +473,77 @@ const init = () => {
     });
   }
 
+  // Contact page premium form interactions
+  const contactPremiumForm = document.getElementById('contactPremiumForm');
+  const contactFormStatus = document.getElementById('contactFormStatus');
+  const contactDateInput = document.getElementById('contactDate');
+  const contactTypeSelect = document.getElementById('contactEnquiryType');
+  const contactChips = document.querySelectorAll('.contact-chip');
+  const faqItems = document.querySelectorAll('.contact-faq-item');
+
+  if (contactDateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    contactDateInput.min = today;
+  }
+
+  if (contactTypeSelect && contactChips.length > 0) {
+    const syncContactChipState = (value) => {
+      contactChips.forEach((chip) => {
+        chip.classList.toggle('active', chip.getAttribute('data-value') === value);
+      });
+    };
+
+    contactChips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const chipValue = chip.getAttribute('data-value');
+        contactTypeSelect.value = chipValue;
+        syncContactChipState(chipValue);
+      });
+    });
+
+    contactTypeSelect.addEventListener('change', () => {
+      syncContactChipState(contactTypeSelect.value);
+    });
+  }
+
+  if (contactPremiumForm) {
+    contactPremiumForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const leadName = document.getElementById('contactLeadName');
+      const enquiryType = document.getElementById('contactEnquiryType');
+
+      if (contactFormStatus) {
+        const selectedType = enquiryType ? enquiryType.options[enquiryType.selectedIndex].text : 'your enquiry';
+        contactFormStatus.textContent = `Thank you, ${leadName.value}! Your ${selectedType.toLowerCase()} request has been received. Our Mini-India team will contact you shortly.`;
+      }
+
+      contactPremiumForm.reset();
+
+      if (contactTypeSelect) {
+        contactTypeSelect.value = 'event';
+      }
+
+      contactChips.forEach((chip) => {
+        chip.classList.toggle('active', chip.getAttribute('data-value') === 'event');
+      });
+    });
+  }
+
+  faqItems.forEach((item) => {
+    const trigger = item.querySelector('.contact-faq-trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      faqItems.forEach((faq) => faq.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+
 };
 
 if (document.readyState === 'loading') {
