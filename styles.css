@@ -434,7 +434,7 @@ img {
 
 /* Image Logo Styling */
 .main-logo-img {
-  height: 120px;
+  height: 190px;
   width: auto;
   object-fit: contain;
   transition: height var(--transition-medium);
@@ -444,11 +444,11 @@ img {
 }
 
 .main-header.sticky .main-logo-img {
-  height: 80px;
+  height: 130px;
 }
 
 .footer-logo-img {
-  height: 120px;
+  height: 220px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -3189,7 +3189,7 @@ footer {
 }
 
 .simple-contact-page .main-header .nav-container {
-  min-height: 108px;
+  min-height: 150px;
   align-items: center;
 }
 
@@ -3200,7 +3200,7 @@ footer {
 }
 
 .simple-contact-page .main-logo-img {
-  height: 82px;
+  height: 150px;
 }
 
 .simple-contact-page .btn-book-now {
@@ -3216,10 +3216,17 @@ footer {
   padding-top: 0;
 }
 
-.simple-contact-banner {
+.simple-contact-page .simple-contact-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 72vh;
   height: 72vh;
   max-height: 760px;
+}
+
+.simple-contact-banner .menu-hero-bg {
+  object-position: center 30%;
 }
 
 .simple-contact-banner-content {
@@ -5243,16 +5250,20 @@ footer {
   }
 
   .simple-contact-page .main-header .nav-container {
-    min-height: 84px;
+    min-height: 110px;
   }
 
   .simple-contact-page .main-logo-img {
-    height: 64px;
+    height: 110px;
   }
 
-  .simple-contact-banner {
+  .simple-contact-page .simple-contact-banner {
     min-height: 420px;
     height: 420px;
+  }
+
+  .footer-logo-img {
+    height: 170px;
   }
 
   .simple-contact-page .menu-hero-title {
